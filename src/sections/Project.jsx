@@ -11,34 +11,40 @@ const projects = [
             "JWT",
             "Tailwind CSS"
         ],
-        github: "#",
-        demo: "#"
+        github: "https://github.com/kanand236",
+        demo: "https://smart-inventory-management-system-f-rho.vercel.app/"
     },
     {
-        title: "Employee Management System",
-        image: "/image/employee-management.png",
+        title: "Hotel Reservation System",
+        image: "/image/hotel-reservation.jpg",
         description:
-            "Employee Management application with CRUD operations, pagination, search and sorting.",
+            "A console-based Hotel Reservation System built using Core Java, OOP concepts and JDBC. The application allows users to search room availability, make and manage reservations, handle customer details and store booking records using MySQL database integration.",
         technologies: [
-            "Spring Boot",
-            "React",
-            "MySQL"
+            "Core Java",
+            "OOP",
+            "JDBC",
+            "MySQL",
+            "Exception Handling",
+            "Collections"
         ],
-        github: "#",
-        demo: "#"
+        github: "https://github.com/kanand236/Hotel_Reservation_System",
+        demo: "https://github.com/kanand236/Hotel_Reservation_System"
     },
     {
-        title: "Task Management System",
-        image: "/image/task-management.png  ",
+        title: "Hospital Management System",
+        image: "/image/hospital-management.jpg",
         description:
-            "Task Management System with authentication and authorization.",
+            "A console-based Hospital Management System developed using Core Java, OOP concepts and JDBC. The application manages patients, doctors, appointments and hospital records with database connectivity and structured data handling.",
         technologies: [
-            "Spring Boot",
-            "React",
-            "PostgreSQL"
+            "Core Java",
+            "OOP",
+            "JDBC",
+            "MySQL",
+            "Exception Handling",
+            "Collections"
         ],
-        github: "#",
-        demo: "#"
+        github: "https://github.com/kanand236/HospitalManagementSystem",
+        demo: "https://github.com/kanand236/HospitalManagementSystem"
     }
 ];
 
@@ -79,18 +85,50 @@ duration-300
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-slate-800 rounded-2xl p-6 shadow-lg hover:-translate-y-2 hover:shadow-sky-500/20 transition-all duration-300"
+                            className="
+        bg-slate-800
+        rounded-2xl
+        overflow-hidden
+        border
+        border-slate-700
+        shadow-lg
+        hover:border-sky-500
+        hover:-translate-y-2
+        transition-all
+        duration-300
+        flex
+        flex-col
+    "
                         >
 
-                            <img
-                                src={project.image}
-                                // alt={project.title}
-                                className="w-full h-52 object-cover rounded-xl mb-5"
-                            />
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="
+            w-full
+            h-52
+            object-cover
+            hover:scale-105
+            transition-transform
+            duration-500
+        "
+                                />
+                            </a>
 
-                            <h3 className="text-2xl font-semibold mb-3">
-                                {project.title}
-                            </h3>
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <h3 className="text-2xl font-semibold mb-3 hover:text-sky-400 transition">
+                                    {project.title}
+                                </h3>
+                            </a>
 
                             <p className="text-gray-400 mb-5 leading-7">
                                 {project.description}
@@ -109,18 +147,18 @@ duration-300
 
                             </div>
 
-                            <div className="flex gap-3">
+                            <div className="flex flex-col sm:flex-row gap-3 mt-auto">
 
                                 <a
                                     href={project.github}
-                                    className="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-lg transition"
+                                    className="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-lg transition text-center"
                                 >
                                     GitHub
                                 </a>
 
                                 <a
                                     href={project.demo}
-                                    className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+                                    className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-center"
                                 >
                                     Live Demo
                                 </a>
