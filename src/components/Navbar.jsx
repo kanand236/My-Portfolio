@@ -2,131 +2,197 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-900/95 backdrop-blur-md text-white z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full bg-slate-950/95 backdrop-blur-md text-white z-50 border-b border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="h-20 flex items-center justify-between">
 
-        {/* Logo */}
+          {/* Logo */}
+          <a
+            href="#home"
+            onClick={closeMenu}
+            className="flex items-center gap-3"
+          >
+            <img
+              src="/logo.jpg"
+              alt="AK Logo"
+              className="w-20 h-20 object-contain"
+            />
 
-        <h1 className="text-2xl font-bold text-sky-400">
-          Anand.dev
-        </h1>
+            <span className="text-xl sm:text-2xl font-bold tracking-wide">
+              Anand <span className="text-sky-400">Digital Studio</span>
+            </span>
+          </a>
 
-        {/* Desktop Menu */}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
 
-        <ul className="hidden md:flex gap-8 text-gray-300">
+            <a
+              href="#home"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
+              Home
+            </a>
 
-          <li>
-            <a href="#about" className="hover:text-sky-400 transition">
+            <a
+              href="#services"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
+              Services
+            </a>
+
+            <a
+              href="#about"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
               About
             </a>
-          </li>
 
-          <li>
-            <a href="#skills" className="hover:text-sky-400 transition">
+            <a
+              href="#skills"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
               Skills
             </a>
-          </li>
 
-          <li>
-            <a href="#projects" className="hover:text-sky-400 transition">
-              Projects
+            <a
+              href="#projects"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
+              Work
             </a>
-          </li>
 
-          <li>
-            <a href="#experience" className="hover:text-sky-400 transition">
+            <a
+              href="#experience"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
               Experience
             </a>
-          </li>
 
-          <li>
-            <a href="#contact" className="hover:text-sky-400 transition">
+            <a
+              href="#why-me"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
+              Why Me
+            </a>
+
+            <a
+              href="#contact"
+              className="text-gray-300 hover:text-sky-400 transition"
+            >
               Contact
             </a>
-          </li>
 
-        </ul>
+            {/* Hire Me Button */}
+            <a
+              href="#contact"
+              className="bg-sky-500 hover:bg-sky-600 px-5 py-2.5 rounded-lg font-semibold transition"
+            >
+              Hire Me
+            </a>
+          </div>
 
-        {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-2xl text-gray-200 hover:text-sky-400 transition"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
 
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden border-t border-slate-800 py-5">
 
-      </div>
+            <div className="flex flex-col gap-4">
 
-      {/* Mobile Menu */}
+              <a
+                href="#home"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
+              >
+                Home
+              </a>
 
-      {menuOpen && (
+              <a
+                href="#services"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
+              >
+                Services
+              </a>
 
-        <div className="md:hidden bg-slate-800 border-t border-slate-700">
-
-          <ul className="flex flex-col text-center py-4 space-y-5">
-
-            <li>
               <a
                 href="#about"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-sky-400"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
               >
                 About
               </a>
-            </li>
 
-            <li>
               <a
                 href="#skills"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-sky-400"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
               >
                 Skills
               </a>
-            </li>
 
-            <li>
               <a
                 href="#projects"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-sky-400"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
               >
-                Projects
+                Work
               </a>
-            </li>
 
-            <li>
               <a
                 href="#experience"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-sky-400"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
               >
                 Experience
               </a>
-            </li>
 
-            <li>
+              <a
+                href="#why-me"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
+              >
+                Why Me
+              </a>
+
               <a
                 href="#contact"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-sky-400"
+                onClick={closeMenu}
+                className="text-gray-300 hover:text-sky-400 transition py-2"
               >
                 Contact
               </a>
-            </li>
 
-          </ul>
+              <a
+                href="#contact"
+                onClick={closeMenu}
+                className="bg-sky-500 hover:bg-sky-600 text-center px-5 py-3 rounded-lg font-semibold transition mt-2"
+              >
+                Hire Me
+              </a>
 
-        </div>
-
-      )}
-
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };

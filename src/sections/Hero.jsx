@@ -1,103 +1,124 @@
 import profileImage from "../assets/image-anand.jpeg";
-import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
+import {
+    FaGithub,
+    FaLinkedin,
+    FaArrowRight,
+    FaDownload
+} from "react-icons/fa";
 
 const Hero = () => {
     return (
         <section
             id="home"
-            className="min-h-screen bg-slate-950 text-white flex items-center pt-24"
+            className="min-h-screen bg-slate-950 text-white flex items-center pt-24 pb-16"
         >
-            <div className="max-w-7xl mx-auto px-6 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                    {/* Left Side */}
+                    {/* Left Content */}
+                    <div className="text-center lg:text-left">
 
-                    <div className="order-2 lg:order-1 text-center lg:text-left">
-
-                        <p className="text-sky-400 text-lg mb-3">
+                        <p className="text-sky-400 font-medium text-lg mb-4">
                             Hello, I'm
                         </p>
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5">
                             Anand Kumar
                         </h1>
 
-                        <h2 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-gray-300 mb-6">
-                            Java Backend Developer
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-200 leading-snug mb-6">
+                            Web Developer &{" "}
+                            <span className="text-sky-400">
+                                Software Developer
+                            </span>
                         </h2>
 
-                        <p className="text-gray-400 leading-8 max-w-xl mx-auto lg:mx-0">
-                            I build secure REST APIs, scalable backend systems,
-                            authentication workflows, and full-stack applications
-                            using Spring Boot, React, PostgreSQL and modern web technologies.
+                        <p className="text-gray-400 text-base sm:text-lg leading-8 max-w-2xl mx-auto lg:mx-0">
+                            I build responsive websites, modern web applications
+                            and business automation solutions that help businesses
+                            work better and grow online.
                         </p>
 
-                        {/* Buttons */}
+                        {/* Services / Technologies */}
+                        <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mt-6">
 
-                        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Java
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Spring Boot
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                WordPress
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Shopify
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                React
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Node.js
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Odoo
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Google Sheets
+                            </span>
+
+                            <span className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-full text-sm text-gray-300">
+                                Zoho CRM
+                            </span>
+                        </div>
+
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 mt-8">
 
                             <a
                                 href="#projects"
-                                className="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-lg font-medium transition text-center"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 px-6 py-3.5 rounded-lg font-semibold transition"
                             >
-                                View Projects
+                                View My Work
+                                <FaArrowRight className="text-sm" />
                             </a>
+
+                            <a
+                                href="#contact"
+                                className="w-full sm:w-auto inline-flex items-center justify-center border border-slate-600 hover:border-sky-400 hover:text-sky-400 px-6 py-3.5 rounded-lg font-semibold transition"
+                            >
+                                Let's Work Together
+                            </a>
+
+                        </div>
+
+                        {/* Resume + Social */}
+                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-8">
 
                             <a
                                 href="/anand-resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="border border-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white hover:text-black transition"
+                                className="inline-flex items-center gap-2 text-gray-300 hover:text-sky-400 transition"
                             >
                                 <FaDownload />
-                                Resume
+                                View Resume
                             </a>
-
-                        </div>
-
-                        {/* Stats */}
-
-                        <div className="flex justify-center lg:justify-start gap-8 mt-10 flex-wrap">
-
-                            <div>
-                                <h3 className="text-3xl font-bold text-sky-400">
-                                    10+
-                                </h3>
-                                <p className="text-gray-400">
-                                    Projects
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-3xl font-bold text-sky-400">
-                                    100+
-                                </h3>
-                                <p className="text-gray-400">
-                                    APIs
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-3xl font-bold text-sky-400">
-                                    2+
-                                </h3>
-                                <p className="text-gray-400">
-                                    Years Learning
-                                </p>
-                            </div>
-
-                        </div>
-
-                        {/* Social Icons */}
-
-                        <div className="flex justify-center lg:justify-start gap-6 mt-10 text-3xl">
 
                             <a
                                 href="https://github.com/kanand236"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-sky-400 transition"
+                                className="text-gray-300 hover:text-sky-400 transition text-2xl"
+                                aria-label="GitHub"
                             >
                                 <FaGithub />
                             </a>
@@ -106,7 +127,8 @@ const Hero = () => {
                                 href="https://www.linkedin.com/in/anand-kumar-201106297"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-sky-400 transition"
+                                className="text-gray-300 hover:text-sky-400 transition text-2xl"
+                                aria-label="LinkedIn"
                             >
                                 <FaLinkedin />
                             </a>
@@ -115,15 +137,21 @@ const Hero = () => {
 
                     </div>
 
-                    {/* Right Side */}
+                    {/* Right Image */}
+                    <div className="flex justify-center lg:justify-end">
 
-                    <div className="order-1 lg:order-2 flex justify-center">
+                        <div className="relative">
 
-                        <img
-                            src={profileImage}
-                            alt="Anand Kumar"
-                            className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px] object-cover rounded-full border-4 border-sky-500 shadow-2xl"
-                        />
+                            {/* Decorative background */}
+                            <div className="absolute inset-0 bg-sky-500/10 rounded-full blur-3xl scale-110"></div>
+
+                            <img
+                                src={profileImage}
+                                alt="Anand Kumar"
+                                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] object-cover rounded-full border-4 border-sky-500 shadow-2xl"
+                            />
+
+                        </div>
 
                     </div>
 

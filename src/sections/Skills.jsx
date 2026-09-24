@@ -1,6 +1,6 @@
-const skillsData = [
+const skillCategories = [
     {
-        category: "Backend",
+        title: "Backend & Development",
         skills: [
             "Java",
             "Spring Boot",
@@ -8,39 +8,41 @@ const skillsData = [
             "Hibernate",
             "JPA",
             "JWT",
-            "REST APIs"
+            "REST APIs",
+            "Node.js"
         ]
     },
     {
-        category: "Frontend",
+        title: "Frontend",
         skills: [
-            "React",
+            "React.js",
             "JavaScript",
-            "HTML",
-            "CSS",
+            "HTML5",
+            "CSS3",
             "Tailwind CSS",
             "Bootstrap"
         ]
     },
     {
-        category: "Database",
+        title: "Database & APIs",
         skills: [
+            "PostgreSQL",
             "MySQL",
-            "PostgreSQL"
+            "SQL",
+            "Postman"
         ]
     },
     {
-        category: "Tools",
+        title: "Tools & Business Solutions",
         skills: [
             "Git",
             "GitHub",
-            "Postman",
-            "VS Code",
             "IntelliJ IDEA",
+            "VS Code",
             "Maven",
             "WordPress",
             "Shopify",
-            "Google Workspace",
+            "Odoo",
             "Google Sheets",
             "Apps Script",
             "AppSheet",
@@ -54,80 +56,68 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="py-24 bg-slate-950 text-white"
+            className="py-24 bg-slate-900 text-white"
         >
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading */}
-
-                <div className="text-center mb-16">
-
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <p className="text-sky-400 font-medium mb-3">
                         My Skills
-                    </h2>
-
-                    <p className="text-gray-400 mt-4">
-                        Technologies and tools I use to build modern web applications.
                     </p>
 
+                    <h2 className="text-4xl md:text-5xl font-bold">
+                        Technologies & Tools
+                    </h2>
+
+                    <p className="text-gray-400 mt-5 leading-7">
+                        A combination of software development technologies,
+                        modern web tools and business solutions that I use
+                        to build practical digital products.
+                    </p>
                 </div>
 
-                {/* Cards */}
+                {/* Skill Categories */}
+                <div className="grid md:grid-cols-2 gap-6">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                    {skillsData.map((item) => (
-
+                    {skillCategories.map((category, index) => (
                         <div
-                            key={item.category}
-                            className="
-                                bg-slate-800
-                                border
-                                border-slate-700
-                                rounded-2xl
-                                p-6
-                                shadow-lg
-                                hover:border-sky-500
-                                hover:-translate-y-2
-                                transition-all
-                                duration-300
-                            "
+                            key={index}
+                            className="bg-slate-800 border border-slate-700 rounded-2xl p-7 hover:border-sky-500 transition-all duration-300"
                         >
 
-                            <h3 className="text-2xl font-semibold text-sky-400 mb-6">
-                                {item.category}
+                            <h3 className="text-xl font-semibold mb-6 text-sky-400">
+                                {category.title}
                             </h3>
 
                             <div className="flex flex-wrap gap-3">
-
-                                {item.skills.map((skill) => (
-
+                                {category.skills.map((skill, skillIndex) => (
                                     <span
-                                        key={skill}
-                                        className="
-                                            bg-slate-700
-                                            hover:bg-sky-500
-                                            hover:text-white
-                                            transition
-                                            duration-300
-                                            px-4
-                                            py-2
-                                            rounded-lg
-                                            text-sm
-                                            font-medium
-                                        "
+                                        key={skillIndex}
+                                        className="px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg text-sm text-gray-300 hover:text-white hover:border-sky-400 transition"
                                     >
                                         {skill}
                                     </span>
-
                                 ))}
-
                             </div>
 
                         </div>
-
                     ))}
 
+                </div>
+
+                {/* Bottom CTA */}
+                <div className="text-center mt-14">
+                    <p className="text-gray-400 mb-5">
+                        Looking for a specific technology or business solution?
+                    </p>
+
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-600 px-7 py-3 rounded-lg font-semibold transition"
+                    >
+                        Let's Discuss
+                    </a>
                 </div>
 
             </div>

@@ -1,126 +1,126 @@
-import profileImage from "../assets/image-anand.jpeg";
-
 const About = () => {
     return (
         <section
             id="about"
-            className="py-24 bg-slate-900 text-white"
+            className="py-24 bg-slate-950 text-white"
         >
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Heading */}
-
-                <div className="text-center mb-16">
-
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                {/* Section Heading */}
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <p className="text-sky-400 font-medium mb-3">
                         About Me
-                    </h2>
-
-                    <p className="text-gray-400 mt-4">
-                        Get to know me better.
                     </p>
 
+                    <h2 className="text-4xl md:text-5xl font-bold">
+                        Developer Who Builds Practical Solutions
+                    </h2>
+
+                    <p className="text-gray-400 mt-5 leading-7">
+                        I combine software development skills with practical
+                        business technology experience to build useful digital
+                        solutions.
+                    </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                {/* Main Content */}
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                    {/* Image */}
-
-                    <div className="flex justify-center">
-
-                        <img
-                            src={profileImage}
-                            alt="Anand Kumar"
-                            className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[380px] lg:h-[380px] object-cover rounded-full border-4 border-sky-500 shadow-2xl"
-                        />
-
-                    </div>
-
-                    {/* Content */}
-
-                    <div className="text-center lg:text-left">
-
-                        <h3 className="text-2xl md:text-3xl font-semibold text-sky-400 mb-6">
-                            Java Full Stack Developer
+                    {/* Left Content */}
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+                            Hi, I'm Anand Kumar
                         </h3>
 
                         <p className="text-gray-300 leading-8 mb-5">
-                            Passionate Java Full Stack Developer with experience
-                            in building scalable web applications using
-                            <span className="text-sky-400"> Spring Boot</span>,
-                            <span className="text-sky-400"> React</span>,
-                            <span className="text-sky-400"> MySQL</span> and
-                            <span className="text-sky-400"> PostgreSQL</span>.
+                            I'm a developer focused on building modern websites,
+                            web applications and backend solutions. My primary
+                            development experience includes Java, Spring Boot,
+                            React and database technologies such as PostgreSQL
+                            and MySQL.
                         </p>
 
                         <p className="text-gray-300 leading-8 mb-5">
-                            I enjoy designing secure REST APIs, implementing
-                            authentication systems, solving real-world problems,
-                            and building responsive user interfaces.
+                            Along with software development, I also work with
+                            WordPress, Shopify, Odoo and business automation
+                            tools. This allows me to understand both the
+                            technical side of a project and the practical
+                            requirements of a business.
                         </p>
 
-                        <p className="text-gray-300 leading-8 mb-8">
-                            My goal is to become a skilled Software Engineer by
-                            developing high-quality, scalable and user-friendly
-                            applications.
+                        <p className="text-gray-300 leading-8">
+                            Whether you need a business website, web application,
+                            backend API or an automation solution, I focus on
+                            creating clean, responsive and practical solutions
+                            based on the project requirements.
                         </p>
 
-                        {/* Quick Info */}
+                        {/* Highlights */}
+                        <div className="grid sm:grid-cols-2 gap-4 mt-8">
 
-                        <div className="grid grid-cols-2 gap-6">
-
-                            <div>
-
-                                <h4 className="text-sky-400 font-semibold">
-                                    Name
+                            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                                <h4 className="text-sky-400 font-semibold mb-2">
+                                    Development
                                 </h4>
-
-                                <p className="text-gray-300">
-                                    Anand Kumar
+                                <p className="text-gray-400 text-sm leading-6">
+                                    Java, Spring Boot, React, Node.js, REST APIs
+                                    and database development.
                                 </p>
-
                             </div>
 
-                            <div>
-
-                                <h4 className="text-sky-400 font-semibold">
-                                    Email
+                            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                                <h4 className="text-sky-400 font-semibold mb-2">
+                                    Freelance Solutions
                                 </h4>
-
-                                <p className="text-gray-300 break-all">
-                                    demo@gmail.com
+                                <p className="text-gray-400 text-sm leading-6">
+                                    WordPress, Shopify, Odoo and business
+                                    automation solutions.
                                 </p>
-
-                            </div>
-
-                            <div>
-
-                                <h4 className="text-sky-400 font-semibold">
-                                    Location
-                                </h4>
-
-                                <p className="text-gray-300">
-                                    India
-                                </p>
-
-                            </div>
-
-                            <div>
-
-                                <h4 className="text-sky-400 font-semibold">
-                                    Experience
-                                </h4>
-
-                                <p className="text-gray-300">
-                                    1+ Year
-                                </p>
-
                             </div>
 
                         </div>
-
                     </div>
 
+                    {/* Right Side */}
+                    <div className="grid grid-cols-2 gap-5">
+
+                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-sky-500 transition">
+                            <div className="text-3xl font-bold text-sky-400 mb-2">
+                                Java
+                            </div>
+                            <p className="text-gray-400 text-sm">
+                                Backend Development
+                            </p>
+                        </div>
+
+                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-sky-500 transition">
+                            <div className="text-3xl font-bold text-sky-400 mb-2">
+                                React
+                            </div>
+                            <p className="text-gray-400 text-sm">
+                                Frontend Development
+                            </p>
+                        </div>
+
+                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-sky-500 transition">
+                            <div className="text-3xl font-bold text-sky-400 mb-2">
+                                Web
+                            </div>
+                            <p className="text-gray-400 text-sm">
+                                Websites & Applications
+                            </p>
+                        </div>
+
+                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-sky-500 transition">
+                            <div className="text-3xl font-bold text-sky-400 mb-2">
+                                Automation
+                            </div>
+                            <p className="text-gray-400 text-sm">
+                                Business Solutions
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>

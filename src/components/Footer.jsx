@@ -21,7 +21,7 @@ const Footer = () => {
                     <div>
 
                         <h2 className="text-2xl font-bold text-sky-400 mb-4">
-                            Anand.dev
+                            Anand Digital Studio
                         </h2>
 
                         <p className="leading-7 text-gray-400">
