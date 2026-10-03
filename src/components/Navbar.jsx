@@ -27,7 +27,7 @@ const Navbar = () => {
             />
 
             <span className="text-xl sm:text-2xl font-bold tracking-wide">
-              Anand <span className="text-sky-400">Digital Studio</span>
+              <span className="text-sky-400">Anand</span>
             </span>
           </a>
 
